@@ -1,0 +1,125 @@
+.container {
+    width: 30%;
+    height: 400px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 10% auto; 
+    border-radius: 15%;
+}
+
+.header {
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.logintitle {
+    font-size: 30px;
+    margin-bottom: 20px; 
+    text-align: center;
+    width: 100%;
+}
+
+.firstname{
+    margin: auto;
+    margin-left: 19%;
+    border-radius: 15px;
+    width: 40%;;
+}
+
+.firstnametitle{
+    margin: auto;
+    margin-left: 15%;
+}
+
+.lastname{
+    margin: auto;
+    margin-left: 14%;
+    border-radius: 15px;
+    width: 40%;;
+}
+
+.lastnametitle{
+    margin: auto;
+    margin-left: 15%;
+}
+
+.email{
+    margin: auto;
+    margin-left: 13%;
+    border-radius: 15px;
+    width: 40%;;
+}
+
+.emailtitle{
+    margin: auto;
+    margin-left: 15%;
+    border-radius: 15px;
+}
+
+.usertype{
+    margin: auto;
+    margin-left: 0,75%;
+    border-radius: 15px;
+    width: 42%;
+}
+
+.usertypetitle{
+    margin: auto;
+    margin-left: 15%;
+}
+
+.username{
+    margin: auto;
+    margin-left: 2%;
+    border-radius: 15px;
+    width: 40%;
+}
+
+.usernametitle{
+    margin: auto;
+    margin-left: 15%;
+}
+
+.password{
+    margin: auto;
+    margin-left: 9%;
+    border-radius: 15px;
+    width: 40%;
+}
+
+.passwordtitle{
+    margin: auto;
+    margin-left: 15%;
+}
+
+.register{
+    margin: auto;
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 85px;
+    height: 30px;
+    border-radius: 15px;
+    background-color:blanchedalmond;
+}
+
+.register:hover{
+    margin: auto;
+    margin-left: 40%;
+    margin-top: 5%;
+    width: 85px;
+    height: 30px;
+    border-radius: 15px;
+    background-color:rgb(253, 212, 151);
+}

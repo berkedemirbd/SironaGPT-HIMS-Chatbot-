@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- CSS dosyası 'static' klasöründen yüklenecek -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div><img src="{{ url_for('static', filename='icon.png') }}" class="gorsel" alt="logo"></div>
+        </div>
+        <div class="header">
+            <h2 class="logintitle">Register</h2>
+        </div>
+        <div class="form"> 
+            <form id="registerForm">
+                <label for="firstname" class="firstnametitle">Name </label>
+                <input type="text" id="firstname" name="firstname" class="firstname" required><br><br>
+                <label for="lastname" class="lastnametitle">Lastname </label>
+                <input type="text" id="lastname" name="lastname" class="lastname" required><br><br>
+                <label for="email" class="emailtitle">E-Mail </label>
+                <input type="email" id="email" name="email" class="email" required><br><br>
+                <label for="usertype" class="usertypetitle">User Type</label>
+                <select id="usertype" name="usertype" class="usertype" required>
+                    <option value="" disabled selected>Please select a user type...</option>
+                    <option value="user1">Unauthorized User </option>
+                    <option value="user2">Standard User</option>
+                    <option value="user3">Admin</option>
+                </select><br><br>
+                <label for="username" class="usernametitle">Username </label>
+                <input type="text" id="username" name="username" class="username" required><br><br>
+                <label for="password" class="passwordtitle">Password </label>
+                <input type="password" id="password" name="password" required class="password"><br><br>
+                <button type="submit" class="register">Register</button>
+            </form>
+        </div>
+    </div>
+    <p id="registerResult"></p>
+
+    <!-- JS dosyası 'static' klasöründen yüklenecek -->
+    <script src="{{ url_for('static', filename='register.js') }}"></script>
+</body>
+</html>

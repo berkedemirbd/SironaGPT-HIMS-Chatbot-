@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRONA GPT</title>
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIiBkYXRhLWJhY2tncm91bmQtY29sb3I9IiM4ZTQ3MzkiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIGlkPSJ0aWdodC1ib3VuZHMiPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48ZyBpZD0idGV4dGJsb2NrdHJhbnNmb3JtIj48c3ZnIHZpZXdCb3g9IjAgMCA5NS4zNzI5OTk3MDAxNzUxMyA5NS40ODEiIGhlaWdodD0iOTUuNDgxIiB3aWR0aD0iOTUuMzcyOTk5NzAwMTc1MTMiIGlkPSJ0ZXh0YmxvY2siPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48Zz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iNiA2LjMwMDAwMDE5MDczNDg2MyA4OC4zMDAwMDMwNTE3NTc4MSA4OC4zOTk5OTM4OTY0ODQzOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAxIDEwMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyIgY2xhc3M9Imljb24taWNvbi0wIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50IiBpZD0iaWNvbi0wIj48ZyBmaWxsPSIjYzlhMDdhIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ij48cGF0aCBmaWxsPSIjYzlhMDdhIiBkPSJNNjIgOTQuN0gzOC4zQzM2LjQgOTQuNyAzNC44IDkzLjEgMzQuOCA5MS4yTDM0LjYgNjUuOUg5LjVDNy42IDY1LjkgNiA2NC4zIDYgNjIuNFYzOC42QzYgMzYuNyA3LjYgMzUuMSA5LjUgMzUuMUgzNC41TDM0LjggOS44QzM0LjggNy45IDM2LjQgNi4zIDM4LjMgNi4zSDYyQzYzLjkgNi4zIDY1LjUgNy45IDY1LjUgOS44UzY0IDEzLjMgNjIgMTMuM0g0MS43TDQxLjQgMzguNkM0MS40IDQwLjUgMzkuOCA0Mi4xIDM3LjkgNDIuMUgxM1Y1OC45SDM4LjFDNDAgNTguOSA0MS42IDYwLjUgNDEuNiA2Mi40TDQxLjggODcuN0g1OC42TDU4LjggNjIuNEM1OC44IDYwLjUgNjAuNCA1OC45IDYyLjMgNTguOUg4Ny40VjQyLjFINjIuM0M2MC40IDQyLjEgNTguOCA0MC42IDU4LjggMzguNkw1OC42IDI0LjJDNTguNiAyMi4zIDYwLjEgMjAuNyA2Mi4xIDIwLjcgNjQgMjAuNyA2NS42IDIyLjIgNjUuNiAyNC4yTDY1LjcgMzUuMkg5MC44QzkyLjcgMzUuMiA5NC4zIDM2LjggOTQuMyAzOC43VjYyLjVDOTQuMyA2NC40IDkyLjcgNjYgOTAuOCA2Nkg2NS43TDY1LjUgOTEuM0M2NS41IDkzLjEgNjQgOTQuNyA2MiA5NC43IiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ii8+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjxkZWZzLz48L3N2Zz4=" sizes="32x32" type="image/png">
+
+    <style>
+        .container {
+            margin: 50px auto;
+            width: 30%;
+            height: 800px;
+            border-radius: 40px;
+            background-color: rgb(236, 236, 236);
+
+
+        }
+        .messages {
+            padding: 40px;
+            overflow-y: auto;
+            margin: auto;
+            border-radius: 45px;
+            align-items: center;
+            height: 80%;
+            margin-top: -110px;
+
+        }
+        .question {
+            background-color: #bdbcbc;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 50px 50px 0px 50px;
+            overflow: hidden;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+            resize: none;
+            
+
+        }
+        .response {
+            background-color: #d0a47c;
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 0px 50px 50px 50px;
+            overflow: hidden;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .textMessage{
+            padding-left: 5%;
+            width: 95%;
+            height: 10%;
+            align-items: center;
+            border-bottom: 5px;
+            border-color: #6085ff;
+
+        }
+
+        .messageInput {
+            border-radius: 20px;
+            margin-left: 10px;
+            width: 70%;
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            white-space: pre-wrap;
+            overflow: hidden;
+            margin-bottom: 25%;
+            margin-top: 5px;
+            border: 2px;
+            text-align: center;
+            display:inline-block;
+            vertical-align: center;
+            align-items: center;
+            color: rgb(85, 85, 85);
+            resize: none; 
+            height: 10%; 
+            min-height: 55px; 
+            max-height: 200px; 
+}
+
+        .button{
+            width: 80px;
+            height: 45px;
+            border-radius: 60px;
+            color: white;
+            background-color: #a8723f;
+            margin-left: 20px;
+            margin-top: -320px;
+            vertical-align:middle;
+            border: 0px;
+            vertical-align: center;
+            transition: filter 0.3s ease;
+        }
+
+        .button:hover{
+            background-color: rgb(126, 83, 43);
+            cursor: pointer;
+        }
+
+        .messageInput:hover{
+            background-color: #dddcdc;
+
+        }
+
+        .gorsel{
+            width: auto;
+            height: auto;
+            margin-left: 50%;
+            z-index: 20;
+            margin-left: 33%;
+        }
+
+
+    .logo{
+        width: 350px;
+        height: 350px;
+        padding-left: 10%;
+        padding-top: 10%;
+        position: absolute;
+        border-radius: 25%;
+    }
+
+    .logout{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        margin-left: 65%;
+        margin-top: 4%;
+        transition: filter 0.3s ease;
+    }
+
+    .logout:hover{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        margin-left: 65%;
+        margin-top: 4%;
+        cursor: pointer;
+        filter: brightness(0.8);
+
+    }
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+    </style>
+</head>
+<body class="body">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+    <img src="{{ url_for('static', filename='logout.png') }}" id="logout" alt="logout" class="logout">
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIiBkYXRhLWJhY2tncm91bmQtY29sb3I9IiM4ZTQ3MzkiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIGlkPSJ0aWdodC1ib3VuZHMiPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48ZyBpZD0idGV4dGJsb2NrdHJhbnNmb3JtIj48c3ZnIHZpZXdCb3g9IjAgMCA5NS4zNzI5OTk3MDAxNzUxMyA5NS40ODEiIGhlaWdodD0iOTUuNDgxIiB3aWR0aD0iOTUuMzcyOTk5NzAwMTc1MTMiIGlkPSJ0ZXh0YmxvY2siPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48Zz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iNiA2LjMwMDAwMDE5MDczNDg2MyA4OC4zMDAwMDMwNTE3NTc4MSA4OC4zOTk5OTM4OTY0ODQzOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAxIDEwMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyIgY2xhc3M9Imljb24taWNvbi0wIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50IiBpZD0iaWNvbi0wIj48ZyBmaWxsPSIjYzlhMDdhIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ij48cGF0aCBmaWxsPSIjYzlhMDdhIiBkPSJNNjIgOTQuN0gzOC4zQzM2LjQgOTQuNyAzNC44IDkzLjEgMzQuOCA5MS4yTDM0LjYgNjUuOUg5LjVDNy42IDY1LjkgNiA2NC4zIDYgNjIuNFYzOC42QzYgMzYuNyA3LjYgMzUuMSA5LjUgMzUuMUgzNC41TDM0LjggOS44QzM0LjggNy45IDM2LjQgNi4zIDM4LjMgNi4zSDYyQzYzLjkgNi4zIDY1LjUgNy45IDY1LjUgOS44UzY0IDEzLjMgNjIgMTMuM0g0MS43TDQxLjQgMzguNkM0MS40IDQwLjUgMzkuOCA0Mi4xIDM3LjkgNDIuMUgxM1Y1OC45SDM4LjFDNDAgNTguOSA0MS42IDYwLjUgNDEuNiA2Mi40TDQxLjggODcuN0g1OC42TDU4LjggNjIuNEM1OC44IDYwLjUgNjAuNCA1OC45IDYyLjMgNTguOUg4Ny40VjQyLjFINjIuM0M2MC40IDQyLjEgNTguOCA0MC42IDU4LjggMzguNkw1OC42IDI0LjJDNTguNiAyMi4zIDYwLjEgMjAuNyA2Mi4xIDIwLjcgNjQgMjAuNyA2NS42IDIyLjIgNjUuNiAyNC4yTDY1LjcgMzUuMkg5MC44QzkyLjcgMzUuMiA5NC4zIDM2LjggOTQuMyAzOC43VjYyLjVDOTQuMyA2NC40IDkyLjcgNjYgOTAuOCA2Nkg2NS43TDY1LjUgOTEuM0M2NS41IDkzLjEgNjQgOTQuNyA2MiA5NC43IiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ii8+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjxkZWZzLz48L3N2Zz4=" class="gorsel" alt="logo">
+
+        <div class="container">
+
+        <div id="messages" class="messages">
+
+
+        </div>
+        <div class="textMessage">
+            <textarea id="messageInput" placeholder="Sorunuzu bu alana giriniz..." class="messageInput" style="text-align: center; align-items: center;"></textarea>
+            <button class="button" onclick="sendMessage()"><img src="https://storage.needpix.com/rsynced_images/paper-planes-1081560_1280.png" alt="Send" style="width: 25px; height: 25px;" class="sendimg"></button>
+
+        </div>
+    </div>
+    <script>
+function sendMessage() {
+    var messageInput = document.getElementById("messageInput");
+    var message = messageInput.value;
+    if (!message.trim()) {
+        alert("Lütfen mesajınızı kutuya yazın.");
+        return;
+    }
+
+    addMessage(message, "question");
+    messageInput.value = "";
+
+    fetch("/send_message", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: message }),
+        credentials: "same-origin"  // Oturum çerezlerinin gönderilmesini sağlamak için
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            addMessage(data.error, "response");
+            console.log("Error response:", data.error);  // Hata mesajını konsola yazdır
+        } else {
+            addMessage(data.message, "response");
+            console.log("Success response:", data.message);  // Başarı mesajını konsola yazdır
+        }
+    })
+    .catch(error => {
+        addMessage("Error: " + error.message, "response");
+        console.error("Fetch error:", error);  // Fetch hatasını konsola yazdır
+    });
+}
+
+function addMessage(text, className) {
+    var messagesDiv = document.getElementById("messages");
+    var messageDiv = document.createElement("div");
+    messageDiv.className = className;
+    messageDiv.textContent = text;
+    messagesDiv.appendChild(messageDiv);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    
+        }
+
+        document.getElementById("logout").addEventListener("click", function() {
+    fetch("/logout", {
+        method: "GET",
+        credentials: "same-origin"  // Oturum çerezlerini de gönder
+    })
+    .then(response => {
+        if (response.redirected) {
+            window.location.href = response.url;  // Yönlendirme varsa kullanıcıyı o sayfaya yönlendir
+        }
+    })
+    .catch(error => {
+        console.error("Çıkış yapılamadı:", error);
+    });
+});
+    </script>
+    
+    
+</body>
+</html>

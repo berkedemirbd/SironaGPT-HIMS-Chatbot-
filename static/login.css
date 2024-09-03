@@ -1,0 +1,84 @@
+.container {
+    width: 30%;
+    height: 400px;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 10% auto; 
+    border-radius: 15%;
+}
+
+.header {
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+.logintitle {
+    font-size: 30px;
+    margin-bottom: 20px; 
+    text-align: center;
+    width: 100%;
+}
+
+.button{
+    height: 25%;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 15px;
+    transition: filter 0.3s ease;
+
+}
+
+.register{
+    height: 25%;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 15px;
+    margin-top: 10px;
+    transition: filter 0.3s ease;
+}
+
+.username{
+    width: 60%;
+    align-items: center;
+    border-radius: 15px;
+    
+}
+
+
+.password{
+    width: 60%;
+    align-items: center;
+    margin-left: 5%;
+    border-radius: 15px;
+}
+
+.button:hover{
+    height: 25%;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 15px;
+    background-color:rgb(253, 212, 151);
+    cursor: pointer;
+}
+
+.register:hover{
+    height: 25%;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color:rgb(253, 212, 151);
+    cursor: pointer;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn to SIRONA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIiBkYXRhLWJhY2tncm91bmQtY29sb3I9IiM4ZTQ3MzkiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIG1lZXQiIGlkPSJ0aWdodC1ib3VuZHMiPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48ZyBpZD0idGV4dGJsb2NrdHJhbnNmb3JtIj48c3ZnIHZpZXdCb3g9IjAgMCA5NS4zNzI5OTk3MDAxNzUxMyA5NS40ODEiIGhlaWdodD0iOTUuNDgxIiB3aWR0aD0iOTUuMzcyOTk5NzAwMTc1MTMiIGlkPSJ0ZXh0YmxvY2siPjxnPjxzdmcgdmlld0JveD0iMCAwIDk1LjM3Mjk5OTcwMDE3NTEzIDk1LjQ4MSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyI+PGc+PHN2ZyB2aWV3Qm94PSIwIDAgOTUuMzcyOTk5NzAwMTc1MTMgOTUuNDgxIiBoZWlnaHQ9Ijk1LjQ4MSIgd2lkdGg9Ijk1LjM3Mjk5OTcwMDE3NTEzIj48Zz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iNiA2LjMwMDAwMDE5MDczNDg2MyA4OC4zMDAwMDMwNTE3NTc4MSA4OC4zOTk5OTM4OTY0ODQzOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAxIDEwMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgaGVpZ2h0PSI5NS40ODEiIHdpZHRoPSI5NS4zNzI5OTk3MDAxNzUxMyIgY2xhc3M9Imljb24taWNvbi0wIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50IiBpZD0iaWNvbi0wIj48ZyBmaWxsPSIjYzlhMDdhIiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ij48cGF0aCBmaWxsPSIjYzlhMDdhIiBkPSJNNjIgOTQuN0gzOC4zQzM2LjQgOTQuNyAzNC44IDkzLjEgMzQuOCA5MS4yTDM0LjYgNjUuOUg5LjVDNy42IDY1LjkgNiA2NC4zIDYgNjIuNFYzOC42QzYgMzYuNyA3LjYgMzUuMSA5LjUgMzUuMUgzNC41TDM0LjggOS44QzM0LjggNy45IDM2LjQgNi4zIDM4LjMgNi4zSDYyQzYzLjkgNi4zIDY1LjUgNy45IDY1LjUgOS44UzY0IDEzLjMgNjIgMTMuM0g0MS43TDQxLjQgMzguNkM0MS40IDQwLjUgMzkuOCA0Mi4xIDM3LjkgNDIuMUgxM1Y1OC45SDM4LjFDNDAgNTguOSA0MS42IDYwLjUgNDEuNiA2Mi40TDQxLjggODcuN0g1OC42TDU4LjggNjIuNEM1OC44IDYwLjUgNjAuNCA1OC45IDYyLjMgNTguOUg4Ny40VjQyLjFINjIuM0M2MC40IDQyLjEgNTguOCA0MC42IDU4LjggMzguNkw1OC42IDI0LjJDNTguNiAyMi4zIDYwLjEgMjAuNyA2Mi4xIDIwLjcgNjQgMjAuNyA2NS42IDIyLjIgNjUuNiAyNC4yTDY1LjcgMzUuMkg5MC44QzkyLjcgMzUuMiA5NC4zIDM2LjggOTQuMyAzOC43VjYyLjVDOTQuMyA2NC40IDkyLjcgNjYgOTAuOCA2Nkg2NS43TDY1LjUgOTEuM0M2NS41IDkzLjEgNjQgOTQuNyA2MiA5NC43IiBkYXRhLWZpbGwtcGFsZXR0ZS1jb2xvcj0iYWNjZW50Ii8+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjwvc3ZnPjwvZz48L3N2Zz48L2c+PC9zdmc+PC9nPjxkZWZzLz48L3N2Zz4=" class="gorsel" alt="logo"></div>
+        <div class="header">
+    <h2 class="logintitle">Log In</h2>
+    </div>
+    <div class="form"> 
+        <form id="loginForm" method="post">
+            <label for="username">User Name </label>
+            <input type="text" id="username" name="username" class="username"><br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required class="password"><br><br>
+            <button type="login" onclick="login()" class="button">Sign In</button>
+            <a href="http://192.168.0.19:5000/register"><button type="button" onclick="button()" class="register">Register</button></a>
+
+        </form>
+        </div>
+    </div>
+    <p id="loginResult"></p>
+
+    <script src="{{ url_for('static', filename='login.css') }}"></script>
+</body>
+</html>
