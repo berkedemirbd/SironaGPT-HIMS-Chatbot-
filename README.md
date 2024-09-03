@@ -18,6 +18,8 @@ Bu kullanıcı girişine ve kaydına olanak sağlayan taslak 'register' ve 'logi
 
 Proje, kullanıcıların güvenli bir şekilde sisteme giriş yapmasını ve yeni kullanıcıların kaydolmasını sağlayan bir oturum yönetim sistemi içerir. Bu sistem, kullanıcı bilgilerini güvenli bir şekilde yönetir ve MySQL veritabanında saklar. SIRONA GPT, aynı zamanda veri tabanındaki bilgileri kullanarak kullanıcıların sorduğu sorulara yanıt verir; bu sayede kullanıcılar, gerçek zamanlı verilere dayalı olarak kararlarını hızlı bir şekilde alabilirler.
 
+Entegre sistemler için uygun bir proje olduğundan yönlendirme butonları ve tasarımı tamamen değişken ve taslak halindedir.
+
 
 
 
