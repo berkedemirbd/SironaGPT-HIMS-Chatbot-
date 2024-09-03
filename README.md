@@ -8,3 +8,6 @@ Chatbot, kullanıcının rolüne göre (örneğin, standart kullanıcı, yöneti
 
 Proje, kullanıcıların güvenli bir şekilde sisteme giriş yapmasını ve yeni kullanıcıların kaydolmasını sağlayan bir oturum yönetim sistemi içerir. Bu sistem, kullanıcı bilgilerini güvenli bir şekilde yönetir ve MySQL veritabanında saklar. SIRONA GPT, aynı zamanda veri tabanındaki bilgileri kullanarak kullanıcıların sorduğu sorulara yanıt verir; bu sayede kullanıcılar, gerçek zamanlı verilere dayalı olarak kararlarını hızlı bir şekilde alabilirler.
 
+![Görsel Açıklaması](C:\Users\berke\OneDrive\Desktop\Readme\Demo.png)
+
+
