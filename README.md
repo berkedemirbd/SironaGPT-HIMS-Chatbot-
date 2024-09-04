@@ -6,8 +6,10 @@ Projenin taslak arayüzü
 
 Chatbot, database'den ilgili kullanıcının rolüne göre (örneğin, standart kullanıcı, yönetici) farklı yanıtlar verir ve böylece her kullanıcının ihtiyacına uygun bilgi sağlanır. Bu özellik, hastane içindeki farklı departmanların özel gereksinimlerini karşılamak için son derece faydalıdır. Ve yanlış anlaşılmaların veya hatalı isteklerin önüne geçmeye de olanak sağlar.
 
+<div align="center">
 Bu kullanıcı girişine ve kaydına olanak sağlayan taslak 'register' ve 'login' ekranları da şu şekilde 
 ![Login Ekranı](https://i.imgur.com/8NPb7d1.png)
+</div>
 
 ![Register Ekranı](https://i.imgur.com/ahMeL0B.png)
 
