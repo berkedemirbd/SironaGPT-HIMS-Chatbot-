@@ -8,7 +8,7 @@ Chatbot, database'den ilgili kullanıcının rolüne göre (örneğin, standart 
 
 <div align="center">
 Bu kullanıcı girişine ve kaydına olanak sağlayan taslak 'register' ve 'login' ekranları da şu şekilde 
-![Login Ekranı](https://i.imgur.com/8NPb7d1.png)
+<img src="https://i.imgur.com/8NPb7d1.png")
 </div>
 
 ![Register Ekranı](https://i.imgur.com/ahMeL0B.png)
